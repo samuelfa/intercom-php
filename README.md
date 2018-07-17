@@ -1,3 +1,9 @@
+# warning
+
+Please don't use this fork, is created only for internal use in SumaCRM.
+
+Go to https://github.com/intercom/intercom-php and you can use the original project.
+
 # intercom-php
 
 PHP bindings for the Intercom API (https://api.intercom.io).
