@@ -8,8 +8,6 @@ class IntercomBasicAuthClient extends IntercomAbstractClient
 {
     /** @var array The required config variables for this type of client */
     private static $required = [
-        'app_id',
-        'api_key',
         'headers',
         'service_description'
     ];
@@ -27,10 +25,6 @@ class IntercomBasicAuthClient extends IntercomAbstractClient
         $config = Collection::fromConfig($config, $client->getDefaultConfig(), static::$required);
 
         $client->configure($config);
-
-        $client->setBasicAuth($config->get('app_id'), $config->get('api_key'));
-
-        $client->setUserAgent('intercom-php/1.5.0', true);
 
         return $client;
     }
